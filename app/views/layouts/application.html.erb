@@ -2,12 +2,16 @@
 <html>
 <head>
   <title>Newapp</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
+<div class="nav">
 <nav>
   <ul>
     <li>Home</li>
@@ -15,10 +19,10 @@
     <li>Contact</li>
   </ul>
 </nav>
-
+</div>
 <%= yield %>
 
-<footer>
+<footer class="footer">
   &copy; 2017 Anne's Kitchen
 </footer>
 
