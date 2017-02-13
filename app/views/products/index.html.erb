@@ -1,58 +1,19 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice" class="alert alert-info" role="alert"><%= notice %></p>
+<% end %>
+
+<h1>Products</h1>
 
 <div class="container-fluid">
-  <div class="jumbotron home">
-  <%= image_tag("food1.jpg", class: "img-responsive food1") %>
-    <div class="background-home">
-    <h1>Recipes</h1>
-    </div>
-  </div>
-</div>
-<div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <%= image_tag("cheesecake.jpg", class: "img-responsive cheesecake") %>
-      <div class="caption">
-        <h4>Double Layer Pumpkin Cheesecake</h4>
-          <span class="btn btn-primary btn-colour-change" role="button">Show</a></span>
-      
-          <span class="btn btn-primary btn-colour-change" role="button">Edit</a></span>
-          <span class="btn btn-primary btn-colour-change" role="button">Destroy</a></span>
-      </div>
-    </div>
-  </div>
+  <div class="row">
+    <% #cache(cache_key_for_products) do %>
+      <%= render @products %>
+    <%#end %>   
+  </div><!-- end row -->
+</div><!-- end container -->
 
-<div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <%= image_tag("mussels.jpg", class: "img-responsive mussels") %>
-      <div class="caption">
-        <h4>Belgian-Style Mussels</h4>
-          <span class="btn btn-primary btn-colour-change" role="button">Show</a></span>
-      
-          <span class="btn btn-primary btn-colour-change" role="button">Edit</a></span>
-          <span class="btn btn-primary btn-colour-change" role="button">Destroy</a></span>
-      </div>
-    </div>
-  </div>
-<div class = "creator">
-<% @products.each do |product| %>
-
-<tr :class => "exampleClass">
-
-<h2 :class => "exampleClass2"><%= product.name %></h2>
-
-<td><%= product.description %></td>
-
-<td><%= product.image_url %></td>
-
-<td><%= link_to 'Show', product %></td>
-
-<td><%= link_to 'Edit', edit_product_path(product) %></td>
-
-<td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
-</tr>
-
-<% end %>
-</div>
 <br>
-<%= link_to 'New Product', new_product_path %>
+
+<% if current_user && current_user.admin? %>
+  <%= link_to 'New Product', new_product_path %>
+<% end %>
