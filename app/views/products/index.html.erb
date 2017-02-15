@@ -8,40 +8,8 @@
     <div class="background-home">
     <h1>Recipes</h1>
     </div>
-  <div class="row">
-    <%= render @products %>
-  </div><!--/row-->
   </div>
 </div>
-<div class="container">
-  <div class="row">
-  <% @products.each do |product| %>
-    <div class="col-sm-2 col-md-4">
-      <h1>Double Layer Pumpkin Cheesecake</h1>
-      <%= image_tag("cheesecake.jpg", class: "img-responsive cheesecake") %>
-      <strong>$ 18</strong>
-          <span class="btn btn-primary btn-colour-change" role="button">Show</a></span>
-          <span class="btn btn-primary btn-colour-change" role="button">Edit</a></span>
-          <span class="btn btn-primary btn-colour-change" role="button">Destroy</a></span>
-    </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <% @products.each do |product| %>
-    <div class="col-sm-2 col-md-4">
-      <h1>Belgian-Style Mussels</h1>
-      <%= image_tag("mussels.jpg", class: "img-responsive mussels") %>
-      <strong>$ 22</strong>
-          <span class="btn btn-primary btn-colour-change" role="button">Show</a></span>
-          <span class="btn btn-primary btn-colour-change" role="button">Edit</a></span>
-          <span class="btn btn-primary btn-colour-change" role="button">Destroy</a></span>
-    </div>
-    <% end %>
-  </div>
-</div>   
 
 <div class = "creator">
 <% @products.each do |product| %>
