@@ -1,13 +1,8 @@
 class StaticPagesController < ApplicationController
-  def about
-  end
+  	def index
+  	end
 
-  def contact
-  end
-
-  def landing_page
-  	@featured_product = Product.first
-  end
+  	def landing_page
+	@products = Product.limit(4)
+	end
 end
-
-
