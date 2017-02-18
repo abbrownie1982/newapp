@@ -1,12 +1,5 @@
+<h1>New Product</h1>
 
-<div class="container-fluid"> 
-  <div class="header">
-   <h1>New Product</h1>
-  </div><!--/header-->
+<%= render 'form' %>
 
-	<%= render 'form' %>
-
-	<span class="btn btn-default" role="button">
-		<%= link_to 'Back', products_path %>
-	</span>
-</div><!--/container-->
+<%= link_to 'Back', products_path %>
