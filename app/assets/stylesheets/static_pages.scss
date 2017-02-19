@@ -5,41 +5,33 @@
 /****** general body ******/
 
 .body-top-padding{
-	padding-top: 50px;
+    padding-top: 50px;
 }
 
 body{
-	line-height: 1.5;
-	font-size: 1.5rem;
+    line-height: 1.5;
+    font-size: 1.5rem;
+    
 }
 
-h1{	
-	font-family: Sailec,Helvetica,Arial,sans-serif;
-	color: #23527c;
-	text-align: center;
+h1{ 
+    font-family: Sailec,Helvetica,Arial,sans-serif;
+    color: #23527c;
+    text-align: center;
 }
 
-.carousel {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
-#carousel-example-generic{
-    padding-top: 250px;
-}
 
 /******** nav bar ********/
-.nav{
-    z-index: 1;
-}
 
 .navbar{
-	background-color: #6C464F;	
+    background-color: #6C464F;  
 }
 
 .navbar-inverse .navbar-brand {
     color: #B3CDD1;
 }
+
+
 
 .companyName{  
     color: #23527c;
@@ -49,41 +41,62 @@ h1{
 }
 
 .companyName a{
-	color: #B3CDD1;
+    color: #B3CDD1;
+
 }
 
 .companyName a:hover{
-	text-decoration: none;
-	background-color: #6C464F;
-	color: white;
+    text-decoration: none;
+    background-color: #6C464F;
+    color: white;
 }
 
 .nav-text{
-	font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+    font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 
 
-.navbar-inverse .navbar-nav>li>a{
+.navbar-inverse .navbar-nav>li>a {
     color: #B3CDD1;
     font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 500;
 }
 
-.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
     background-color: #79565F;
 }
 
-.navbar-inverse .navbar-toggle{
+.navbar-inverse .navbar-toggle {
     border-color: #B3CDD1;
 }
 
-.navbar-inverse .navbar-toggle .icon-bar{
+.navbar-inverse .navbar-toggle .icon-bar {
     background-color: #B3CDD1;
 }
 
 
-// Landing page
+/******* landing page 
+.landing-page-caption {
+    font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+    font-size: 3em;
+    color: white;
+    background-color: rgba(0,0,0, 0.3);
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 40%;
+    max-height: 20%;
+    top: 0;
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 5px;
+  
+}
+
+
+/****** home page *******/
 
 .landing-page-image{
     display: block; 
@@ -107,6 +120,42 @@ h1{
     font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
 }
 
-.footer{
-	margin-top: 1305px;
+/***** about page********/
+
+.about-section{
+    text-align: center; 
 }
+
+/***** contact page ******/
+
+.contact-section{
+    text-align: center;
+}
+
+.contact-form{
+    //text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/****** thank you page *****/
+
+
+/***** Footer ******/
+
+#copyright{
+    color: #B3CDD1;
+    float: center;
+    padding: 10px;
+
+}
+
+#copyright-navbar{  
+    width: 100%;    
+    position: fixed;
+    bottom: 0px;
+    background-color: #6C464F;
+    font-family: Lato, Futura, 'Trebuchet MS', Arial, sans-serif;
+}
+

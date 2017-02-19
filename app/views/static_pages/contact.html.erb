@@ -1,7 +1,38 @@
-<div class="container-fluid">
-	<div class="jumbotron contact">
-		<%= image_tag("food1.jpg", class: "img-responsive food1") %>
-		<h1>Contact me</h1>
-		<p>anbrownie1@gmail.com</p>
-	</div>
+<h1>Contact Me</h1>
+<div class="contact-section">
+	<p>If you have any questions please contact me via the form below</p>
 </div>
+
+<%= flash[:notice] %>
+
+<%= form_tag("/static_pages/thank_you", class: "contact-form form-horizontal") do %>
+
+    <div class="form-group">
+      <div class="col-sm-2 control-label">
+        <%= label_tag :name %>
+      </div>
+      <div class="col-sm-10">
+        <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+      </div>
+    </div>      
+    <div class="form-group">
+      <%= label_tag :email, "Email Address", class: "col-sm-2 control-label" %>
+      <div class="col-sm-10">
+        <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-2 control-label">
+        <%= label_tag :message %>
+      </div>
+      <div class="col-sm-10">
+        <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+      </div>
+    </div>      
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <%= submit_tag "Send", class:"btn btn-default" %>
+      </div>
+    </div>  
+<% end %>
+
